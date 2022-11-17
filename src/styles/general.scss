@@ -1,0 +1,14 @@
+@use './partials/vars' as *;
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+body {
+    font-family: $main-font;
+    min-height: 100vh;
+    color: $text-white;
+    background-color: $primary-color;
+}
+
+.debug {
+    background-color: rgba(255, 0, 0, 0.5);
+}
