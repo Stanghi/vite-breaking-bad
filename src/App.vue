@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-    <AppHeader />
+    <AppHeader title="Breaking Bad Api" />
     <main>
         <CategorySelect />
         <CharacterList />

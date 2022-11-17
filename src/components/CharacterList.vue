@@ -18,7 +18,20 @@ export default {
 </script>
 
 <template>
-    <p>CharacterList</p>
+    <div v-if="store.isLoaded" class="container p-5">
+        <div class="row">
+            <CharacterCard />
+        </div>
+    </div>
+    <div v-else>
+        <AppLoading />
+    </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../styles/partials/vars' as *;
+
+.container {
+    background-color: $container-white;
+}
+</style>

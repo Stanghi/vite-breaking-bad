@@ -4,6 +4,8 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+    <p>card</p>
+</template>
 
 <style lang="scss" scoped></style>
