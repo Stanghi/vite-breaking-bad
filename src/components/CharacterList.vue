@@ -20,6 +20,7 @@ export default {
 <template>
     <div class="container">
         <div v-if="store.isLoaded" class="row">
+            <div class="band-found-characters p-3 mb-4">Found {{ store.charactersListData.length }} characters</div>
             <CharacterCard v-for="(character, index) in store.charactersListData" :key="index" :character="character" />
         </div>
         <div v-else>
@@ -34,6 +35,11 @@ export default {
 .container {
     background-color: $container-white;
     padding: 65px;
-    border: 1px solid blueviolet;
+}
+
+.band-found-characters {
+    font-weight: bold;
+    width: 100%;
+    background-color: $band-found-characters;
 }
 </style>
