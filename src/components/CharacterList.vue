@@ -18,13 +18,13 @@ export default {
 </script>
 
 <template>
-    <div v-if="store.isLoaded" class="container p-5">
-        <div class="row">
-            <CharacterCard />
+    <div class="container">
+        <div v-if="store.isLoaded" class="row">
+            <CharacterCard v-for="(character, index) in store.charactersListData" :key="index" :character="character" />
         </div>
-    </div>
-    <div v-else>
-        <AppLoading />
+        <div v-else>
+            <AppLoading />
+        </div>
     </div>
 </template>
 
@@ -33,5 +33,7 @@ export default {
 
 .container {
     background-color: $container-white;
+    padding: 65px;
+    border: 1px solid blueviolet;
 }
 </style>
