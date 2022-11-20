@@ -2,12 +2,14 @@
 import { store } from '../data/store';
 import CharacterCard from './CharacterCard.vue';
 import AppLoading from './AppLoading.vue';
+import CategorySelect from './CategorySelect.vue';
 
 export default {
     name: 'CharacterList',
     components: {
         AppLoading,
         CharacterCard,
+        CategorySelect,
     },
     data() {
         return {

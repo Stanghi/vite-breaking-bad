@@ -22,7 +22,9 @@ export default {
         getCharachers() {
             store.isLoaded = false;
             axios
-                .get(store.apiUrl)
+                .get(store.apiUrl, {
+                    params: { category: store.filterWhitValue },
+                })
                 .then((result) => {
                     store.charactersListData = result.data;
                     store.isLoaded = true;
@@ -41,7 +43,7 @@ export default {
 <template>
     <AppHeader title="Breaking Bad Api" />
     <main>
-        <CategorySelect />
+        <CategorySelect @changeFilter="$emit(getCharachers())" />
         <CharacterList />
     </main>
 </template>
